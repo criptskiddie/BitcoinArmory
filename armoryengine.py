@@ -238,9 +238,10 @@ if not USE_TESTNET:
    GENESIS_TX_HASH         = ';\xa3\xed\xfdz{\x12\xb2z\xc7,>gv\x8fa\x7f\xc8\x1b\xc3\x88\x8aQ2:\x9f\xb8\xaaK\x1e^J'
    ADDRBYTE = '\x00'
 else:
+   # Update hash values to reflect GENESIS_BLOCK_HASH_HEX
    BITCOIN_PORT = 18333
    MAGIC_BYTES  = '\xfa\xbf\xb5\xda'
-   GENESIS_BLOCK_HASH_HEX  = '08b067b31dc139ee8e7a76a4f2cfcca477c4c06e1ef89f4ae308951907000000'
+   GENESIS_BLOCK_HASH_HEX  = '43497fd7f826957108f4a30fd9cec3aeba79972084e90ead01ea330900000000'
    GENESIS_BLOCK_HASH      = '\x08\xb0g\xb3\x1d\xc19\xee\x8ezv\xa4\xf2\xcf\xcc\xa4w\xc4\xc0n\x1e\xf8\x9fJ\xe3\x08\x95\x19\x07\x00\x00\x00'
    GENESIS_TX_HASH_HEX     = '3ba3edfd7a7b12b27ac72c3e67768f617fc81bc3888a51323a9fb8aa4b1e5e4a'
    GENESIS_TX_HASH         = ';\xa3\xed\xfdz{\x12\xb2z\xc7,>gv\x8fa\x7f\xc8\x1b\xc3\x88\x8aQ2:\x9f\xb8\xaaK\x1e^J'
@@ -2520,7 +2521,7 @@ opnames = ['']*256
 opnames[0] =   'OP_0'
 for i in range(1,76):
    opnames[i] ='OP_PUSHDATA'
-opnames[76] =	'OP_PUSHDATA1'
+opnames[76] =   'OP_PUSHDATA1'
 opnames[77] =	'OP_PUSHDATA2'
 opnames[78] =	'OP_PUSHDATA4'
 opnames[79] =	'OP_1NEGATE'
